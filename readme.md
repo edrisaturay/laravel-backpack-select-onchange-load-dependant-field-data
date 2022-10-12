@@ -25,7 +25,7 @@ Inside your CrudController:
 
 ```php
 CRUD::addField([
-       'view_namespace' => 'ogroosoft-onchange-field-options::fields',
+       'view_namespace' => 'edrisa-onchange-field-options::fields',
        'type' => "dependantFieldOptions",
        'dependency_name' => 'surah_id', // write (parent/specefic) field name, when the field's value will change then load this field options
        'label' => "Verse",

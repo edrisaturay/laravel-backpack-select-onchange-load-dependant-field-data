@@ -9,7 +9,7 @@
             "homepage": "https://github.com/edrisaturay/laravel-backpack-select-onchange-load-dependant-field-data"
         }
     ],
-    "homepage": "https://github.com/ogroosoft",
+    "homepage": "https://github.com/edrusaturay",
     "keywords": ["Laravel", "Backpack", "Backpack for Laravel", "Addon", "Admin Panel", "Onchange Load Dependant Field Data"],
     "require": {
         "backpack/crud": "^5.0"

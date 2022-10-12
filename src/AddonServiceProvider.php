@@ -1,6 +1,6 @@
 <?php
 
-namespace OgrooSoft\OnchangeFieldData;
+namespace Edrisa\OnchangeFieldData;
 
 use Illuminate\Support\ServiceProvider;
 
