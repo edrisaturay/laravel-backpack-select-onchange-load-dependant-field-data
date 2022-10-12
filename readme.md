@@ -16,7 +16,7 @@ This package provides a ```dependantFieldOptions``` field type for the [Backpack
 Via Composer
 
 ``` bash
-composer require ogroosoft/onchange-load-dependant-field-data
+composer require edrisa/onchange-load-dependant-field-data
 ```
  
  ## Usage
@@ -42,7 +42,7 @@ CRUD::addField([
 
 ##  Uninstall  
 ```bash
-composer remove ogroosoft/onchange-load-dependant-field-data
+composer remove edrisa/onchange-load-dependant-field-data
 ```
  
  
