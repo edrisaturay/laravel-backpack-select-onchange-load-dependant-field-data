@@ -1,28 +1,28 @@
 {
-    "name": "ogroosoft/onchange-load-dependant-field-data",
+    "name": "edrisa/onchange-load-dependant-field-data",
     "description": "Backpack Fields",
     "license": "MIT",
     "authors": [
         {
-            "name": "OgrooSoft",
-            "email": "ogroosoft@mail.com",
-            "homepage": "https://github.com/ogroosoft"
+            "name": "Edrisa",
+            "email": "edrisaa.turay@gmail.com",
+            "homepage": "https://github.com/edrisaturay/laravel-backpack-select-onchange-load-dependant-field-data"
         }
     ],
     "homepage": "https://github.com/ogroosoft",
     "keywords": ["Laravel", "Backpack", "Backpack for Laravel", "Addon", "Admin Panel", "Onchange Load Dependant Field Data"],
     "require": {
-        "backpack/crud": "^4.1.0"
+        "backpack/crud": "^5.0"
     },
     "autoload": {
         "psr-4": {
-            "OgrooSoft\\OnchangeFieldData\\": "src/"
+            "Edrisa\\OnchangeFieldData\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "OgrooSoft\\OnchangeFieldData\\AddonServiceProvider"
+                "Edrisa\\OnchangeFieldData\\AddonServiceProvider"
             ]
         }
     }

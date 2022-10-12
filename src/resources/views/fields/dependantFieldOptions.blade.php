@@ -13,7 +13,7 @@
 <label>{!! $field['label'] !!} </label>
 
 <select
-    class="form-control select2 os-dependant-field"
+    class="form-control select2 edrisa-dependant-field"
     id="{{ $field['id'] }}"
     name="{{ $field['name'] }}"
     @include('crud::fields.inc.attributes')

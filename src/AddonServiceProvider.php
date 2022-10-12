@@ -13,6 +13,6 @@ class AddonServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'ogroosoft-onchange-field-options');
+        $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'edrisa-onchange-field-options');
     }
 }
