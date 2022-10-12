@@ -56,7 +56,7 @@ If you discover any security related issues, please email [the author](composer.
 MIT. Please see the [license file](license.md) for more information.
 
 <p>Developed by : <a href="https://github.com/emrancu">AL EMRAN</a></p>
- 
+<p>Updated By: <a href="https://github.com/edrisaturay">Edrisa Turay</a></p>
  [ico-version]: https://img.shields.io/packagist/v/ogroosoft/onchange-load-dependant-field-data.svg
 [ico-downloads]: https://img.shields.io/packagist/dt/ogroosoft/onchange-load-dependant-field-data.svg
  
