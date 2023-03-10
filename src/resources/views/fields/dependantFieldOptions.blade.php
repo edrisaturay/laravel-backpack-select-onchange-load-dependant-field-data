@@ -61,9 +61,9 @@
 
                 data.forEach(item => {
                     let selected = '';
-                    if (item.id == {{ $field['default'] }}) {
-                        selected = 'selected';
-                    }
+                    // if (item.id == {{ $field['default'] }}) {
+                    //     selected = 'selected';
+                    // }
                     options += '<option ' + selected + ' value="' + item.id + '">' + item.{{$field['attribute']}} + ' </option>'
                 });
 
