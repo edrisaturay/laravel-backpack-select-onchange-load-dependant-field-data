@@ -60,7 +60,11 @@
                 let options = ' <option value=""> ' + placeholder + '</option>';
 
                 data.forEach(item => {
-                    options += '<option value="' + item.id + '">' + item.{{$field['attribute']}} + ' </option>'
+                    let selected = '';
+                    if (item.id == {{ $field['default'] }}) {
+                        selected = 'selected';
+                    }
+                    options += '<option ' + selected + ' value="' + item.id + '">' + item.{{$field['attribute']}} + ' </option>'
                 });
 
                 resetOptions(options);
