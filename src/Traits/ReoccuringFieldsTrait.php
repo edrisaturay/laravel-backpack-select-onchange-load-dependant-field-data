@@ -273,12 +273,81 @@ trait ReoccuringFieldsTrait
             ),
             'hint' => $_hint,
             'tab' => ($_tab)? $_tab : "Main",
-
         ]);
     }
 
     protected function text_field(
         $_name = 'name',
+        $_wrapperClass = 'col-12',
+        $_required = false,
+        $_hint = null,
+        $_placeholder = null,
+        $_disabled = false,
+        $_readonly = false,
+    ){
+        return $this->crud->addField([
+            'name' => $_name,
+            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'type' => 'text',
+            'wrapper' => [
+                'class' => 'form-group ' . $_wrapperClass,
+            ],
+            'attributes' => array_merge(
+                [
+                    'placeholder' => $_placeholder ?? __('Please enter the :name', ['name' => $_name])
+                ],
+                [
+                    ($_disabled) ? 'disabled'  : null
+                ],
+                [
+                    ($_readonly) ? 'readonly'  : null
+                ],
+                [
+                    ($_required) ? 'required'  : null
+                ]
+            ),
+            'hint' => $_hint,
+        ]);
+    }
+
+    protected function number_field(
+        $_name = 'name',
+        $_wrapperClass = 'col-12',
+        $_required = false,
+        $_hint = null,
+        $_placeholder = null,
+        $_disabled = false,
+        $_readonly = false,){
+        return $this->crud->addField([
+            'name' => $_name,
+            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'type' => 'number',
+            'wrapper' => [
+                'class' => 'form-group ' . $_wrapperClass,
+            ],
+            'attributes' => array_merge(
+                [
+                    'placeholder' => $_placeholder ?? __('Please enter the :name', ['name' => $_name])
+                ],
+                [
+                    ($_disabled) ? 'disabled'  : null
+                ],
+                [
+                    ($_readonly) ? 'readonly'  : null
+                ],
+                [
+                    ($_required) ? 'required'  : null
+                ],
+                [
+                    'step' => 'any',
+                ]
+            ),
+            'hint' => $_hint,
+        ]);
+    }
+
+    protected function number_field_with_tab(
+        $_name,
         $_wrapperClass = 'col-12',
         $_required = false,
         $_hint = null,
@@ -306,12 +375,15 @@ trait ReoccuringFieldsTrait
                 ],
                 [
                     ($_required) ? 'required'  : null
+                ],
+                [
+                    'step' => 'any',
                 ]
             ),
             'hint' => $_hint,
+            'tab' => ($_tab)? $_tab : "Main",
         ]);
     }
-
     protected function phone_field($_name, $_wrapperClass = 'col-12'){
         return $this->crud->addField([
             'name' => $_name,
