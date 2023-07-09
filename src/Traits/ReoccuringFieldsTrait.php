@@ -285,6 +285,19 @@ trait ReoccuringFieldsTrait
         $_disabled = false,
         $_readonly = false,
     ){
+        $attributes = [];
+        if($_disabled) {
+            $attributes['disabled'] = 'disabled';
+        }
+        if($_readonly) {
+            $attributes['readonly'] = 'readonly';
+        }
+        if($_required) {
+            $attributes['required'] = 'required';
+        }
+        if ($_placeholder) {
+            $attributes['placeholder'] = $_placeholder ?? __('Please enter the :name', ['name' => $_name]);
+        }
         return $this->crud->addField([
             'name' => $_name,
             'label' => ucwords(Str::replace('_', ' ', $_name)),
@@ -292,20 +305,7 @@ trait ReoccuringFieldsTrait
             'wrapper' => [
                 'class' => 'form-group ' . $_wrapperClass,
             ],
-            'attributes' => array_merge(
-                [
-                    'placeholder' => $_placeholder ?? __('Please enter the :name', ['name' => $_name])
-                ],
-                [
-                    ($_disabled) ? 'disabled'  : null
-                ],
-                [
-                    ($_readonly) ? 'readonly'  : null
-                ],
-                [
-                    ($_required) ? 'required'  : null
-                ]
-            ),
+            'attributes' => $attributes,
             'hint' => $_hint,
         ]);
     }
@@ -318,6 +318,20 @@ trait ReoccuringFieldsTrait
         $_placeholder = null,
         $_disabled = false,
         $_readonly = false,){
+        $attributes = [];
+        if($_disabled) {
+            $attributes['disabled'] = 'disabled';
+        }
+        if($_readonly) {
+            $attributes['readonly'] = 'readonly';
+        }
+        if($_required) {
+            $attributes['required'] = 'required';
+        }
+        if ($_placeholder) {
+            $attributes['placeholder'] = $_placeholder ?? __('Please enter the :name', ['name' => $_name]);
+        }
+        $attributes['step'] = 'any';
         return $this->crud->addField([
             'name' => $_name,
             'label' => ucwords(Str::replace('_', ' ', $_name)),
@@ -325,23 +339,7 @@ trait ReoccuringFieldsTrait
             'wrapper' => [
                 'class' => 'form-group ' . $_wrapperClass,
             ],
-            'attributes' => array_merge(
-                [
-                    'placeholder' => $_placeholder ?? __('Please enter the :name', ['name' => $_name])
-                ],
-                [
-                    ($_disabled) ? 'disabled'  : null
-                ],
-                [
-                    ($_readonly) ? 'readonly'  : null
-                ],
-                [
-                    ($_required) ? 'required'  : null
-                ],
-                [
-                    'step' => 'any',
-                ]
-            ),
+            'attributes' => $attributes,
             'hint' => $_hint,
         ]);
     }
