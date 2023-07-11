@@ -192,7 +192,7 @@ trait ReoccuringFieldsTrait
 
     protected function tiny_mce_field(
         $_name,
-        $_tab,
+        $_tab = null,
         $_label = null,
     ){
         return $this->crud->addField([
@@ -205,7 +205,7 @@ trait ReoccuringFieldsTrait
 
     protected function easy_mde_field(
         $_name,
-        $_tab,
+        $_tab = null,
         $_label = null,
     ){
         return $this->crud->addField([
