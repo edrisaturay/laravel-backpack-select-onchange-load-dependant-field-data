@@ -415,6 +415,29 @@ trait ReoccuringFieldsTrait
 
     }
 
+    protected function date_time_field(
+        $_name,
+        $_label = null,
+    ){
+        return $this->crud->addField([
+            'name' => $_name,
+            'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
+            'type' => 'datetime'
+        ]);
+    }
+
+    protected function date_time_with_tab_field(
+        $_name,
+        $_label = null,
+        $_tab = 'Main'
+    ){
+        return $this->crud->addField([
+            'name' => $_name,
+            'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
+            'type' => 'datetime',
+            'tab' => $_tab
+        ]);
+    }
     protected function time_field(
         $_name,
         $_wrapperClass = 'col-12',
