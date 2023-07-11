@@ -162,16 +162,19 @@ trait ReoccuringFieldsTrait
         array $_attributes = [],
         string $_label = null,
         bool $_allowsMultiple = false,
+        array $_selected = []
     ){
         $this->crud->addField([
             'name' => $_name,
             'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
             'type' => 'select2_from_array_tagged',
+            'view_namespace' => 'edrisa-onchange-field-options::fields',
             'options' => $_options,
             'allows_null' =>  $_allowsNull,
             'attributes' => $_attributes,
             'allows_multiple' => $_allowsMultiple,
-            'tab' => $_tab
+            'tab' => $_tab,
+            'selected' => $_selected
         ]);
     }
 
