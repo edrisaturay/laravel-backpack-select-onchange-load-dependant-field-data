@@ -431,6 +431,102 @@ trait ReoccuringFieldsTrait
         ]);
     }
 
+    protected function section_title_plain_field(
+        $_name,
+        $_title,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'title' => $_title,
+            'view_namespace' => 'edrisa-onchange-field-options::fields'
+        ]);
+    }
 
+    protected function section_title_plain_with_tab_field(
+        $_name,
+        $_title,
+        $_tab,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'title' => $_title,
+            'view_namespace' => 'edrisa-onchange-field-options::fields',
+            'tab' => $_tab
+        ]);
+    }
+
+    protected function section_title_content_field(
+        $_name,
+        $_content,
+        $_variant = 'info',
+        $_divider = true,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'variant' => $_variant,
+            'content' => $_content,
+            'divider' => $_divider,
+            'view_namespace' => 'edrisa-onchange-field-options::fields'
+        ]);
+    }
+
+    protected function section_title_content_with_tab_field(
+        $_name,
+        $_content,
+        $_tab,
+        $_variant = 'info',
+        $_divider = true,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'variant' => $_variant,
+            'content' => $_content,
+            'divider' => $_divider,
+            'view_namespace' => 'edrisa-onchange-field-options::fields',
+            'tab' => $_tab
+        ]);
+    }
+
+    protected function section_title_sub_heading_content_field(
+        $_name,
+        $_title,
+        $_content,
+        $_variant = 'info',
+        $_divider = true,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'title' => $_title,
+            'variant' => $_variant,
+            'content' => $_content,
+            'divider' => $_divider,
+            'view_namespace' => 'edrisa-onchange-field-options::fields'
+        ]);
+    }
+
+    protected function section_title_sub_heading_content_with_tab_field(
+        $_name,
+        $_title,
+        $_content,
+        $_tab,
+        $_variant = 'info',
+        $_divider = true,
+    ){
+        $this->crud->addField([
+            'name' => $_name,
+            'type' => 'section-title',
+            'title' => $_title,
+            'variant' => $_variant,
+            'content' => $_content,
+            'divider' => $_divider,
+            'view_namespace' => 'edrisa-onchange-field-options::fields',
+            'tab' => $_tab
+        ]);
+    }
 
 }
