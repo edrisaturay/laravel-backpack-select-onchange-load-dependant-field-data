@@ -484,7 +484,7 @@ trait ReoccuringFieldsTrait
             'name' => $_name,
             'type' => 'section-title',
             'variant' => $_variant,
-            'content' => $_content,
+            'content' => __($_content, ['break', '<br>']),
             'divider' => $_divider,
             'view_namespace' => 'edrisa-onchange-field-options::fields',
             'tab' => $_tab
