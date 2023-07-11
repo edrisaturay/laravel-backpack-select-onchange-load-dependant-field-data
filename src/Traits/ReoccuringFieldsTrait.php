@@ -249,10 +249,11 @@ trait ReoccuringFieldsTrait
         $_disabled = false,
         $_readonly = false,
         $_tab = null,
+        $_label = null,
     ){
         return $this->crud->addField([
             'name' => $_name,
-            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
             'type' => 'text',
             'wrapper' => [
                 'class' => 'form-group ' . $_wrapperClass,
@@ -284,6 +285,7 @@ trait ReoccuringFieldsTrait
         $_placeholder = null,
         $_disabled = false,
         $_readonly = false,
+        $_label = null,
     ){
         $attributes = [];
         if($_disabled) {
@@ -300,7 +302,7 @@ trait ReoccuringFieldsTrait
         }
         return $this->crud->addField([
             'name' => $_name,
-            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
             'type' => 'text',
             'wrapper' => [
                 'class' => 'form-group ' . $_wrapperClass,
