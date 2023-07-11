@@ -160,7 +160,7 @@ trait ReoccuringFieldsTrait
         string $_tab = null,
         bool $_allowsNull = false,
         array $_attributes = [],
-        string$_label = null,
+        string $_label = null,
         bool $_allowsMultiple = false,
     ){
         $this->crud->addField([
@@ -170,7 +170,8 @@ trait ReoccuringFieldsTrait
             'options' => $_options,
             'allows_null' =>  $_allowsNull,
             'attributes' => $_attributes,
-            'allows_multiple' => $_allowsMultiple
+            'allows_multiple' => $_allowsMultiple,
+            'tab' => $_tab
         ]);
     }
 
