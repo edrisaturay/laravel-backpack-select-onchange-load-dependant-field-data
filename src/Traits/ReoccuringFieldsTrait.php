@@ -434,11 +434,13 @@ trait ReoccuringFieldsTrait
     protected function section_title_plain_field(
         $_name,
         $_title,
+        $_divider = false,
     ){
         $this->crud->addField([
             'name' => $_name,
             'type' => 'section-title',
             'title' => $_title,
+            'divider' => $_divider,
             'view_namespace' => 'edrisa-onchange-field-options::fields'
         ]);
     }
@@ -447,13 +449,15 @@ trait ReoccuringFieldsTrait
         $_name,
         $_title,
         $_tab,
+        $_divider = false,
     ){
         $this->crud->addField([
             'name' => $_name,
             'type' => 'section-title',
             'title' => $_title,
             'view_namespace' => 'edrisa-onchange-field-options::fields',
-            'tab' => $_tab
+            'tab' => $_tab,
+            'divider' => $_divider
         ]);
     }
 
