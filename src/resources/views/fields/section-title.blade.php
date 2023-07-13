@@ -16,6 +16,13 @@
     } else {
         $content = $field['content'] ?? null;
     }
+    if (isset($field[$wrapper_class])){
+        $wrapper_class = $field['$wrapper_class']['class']($entry ?? null);
+        $wrapperStyle = $field['$wrapper_class']['style']($entry ?? null);
+    }else{
+        $wrapper_class = $field['$wrapper_class']['class']  ?? null;
+        $wrapperStyle = $field['$wrapper_class']['style'] ?? null;
+    }
 
 @endphp
 
@@ -24,7 +31,9 @@
 @endif
 
 @if(array_key_exists('title', $field))
-    <h4 class="mb-2">{{ $title }}</h4>
+    <div class="{{ $wrapper_class }}">
+        <{{ $wrapper_class }}>{{ $title }}</{{ $wrapper_class }}>
+    </div>
 @endif
 @if(array_key_exists('content', $field))
     <div class="bd-callout border-{{ $field['variant'] ?? 'info' }}">
