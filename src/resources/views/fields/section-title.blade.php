@@ -20,8 +20,8 @@
         $wrapper_class = $field['$wrapper_class']['class']($entry ?? null);
         $wrapperStyle = $field['$wrapper_class']['style']($entry ?? null);
     }else{
-        $wrapper_class = $field['$wrapper_class']['class']  ?? null;
-        $wrapperStyle = $field['$wrapper_class']['style'] ?? null;
+        $wrapper_class = 'span';
+        $wrapper_style = null;
     }
 
 @endphp
@@ -31,7 +31,7 @@
 @endif
 
 @if(array_key_exists('title', $field))
-    <div class="{{ $wrapper_class }}">
+    <div class="{{ $wrapper_style }}">
         <{{ $wrapper_class }}>{{ $title }}</{{ $wrapper_class }}>
     </div>
 @endif
