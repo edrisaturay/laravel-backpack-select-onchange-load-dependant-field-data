@@ -4,6 +4,8 @@
 @php
     $variant = $field['variant'] ?? 'info';
 
+    $wrapper_style = null;
+    $wrapper_class = 'span';
     // If the user has specified a closure, then pass in the current entry and return the result of that closure.
     if(isset($field['title']) && $field['title'] instanceof \Closure) {
         $title = $field['title']($entry ?? null);
