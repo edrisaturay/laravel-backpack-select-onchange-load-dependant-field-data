@@ -18,7 +18,7 @@
     }
     if (isset($field[$wrapper_class])){
         $wrapper_class = $field['$wrapper_class']['class']($entry ?? null);
-        $wrapperStyle = $field['$wrapper_class']['style']($entry ?? null);
+        $wrapper_style = $field['$wrapper_class']['style']($entry ?? null);
     }else{
         $wrapper_class = 'span';
         $wrapper_style = null;

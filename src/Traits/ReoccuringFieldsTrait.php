@@ -528,6 +528,7 @@ trait ReoccuringFieldsTrait
         $_content,
         $_variant = 'info',
         $_divider = true,
+        array | null $_wrapper_class = null
     ){
         $this->crud->addField([
             'name' => $_name,
@@ -536,7 +537,8 @@ trait ReoccuringFieldsTrait
             'variant' => $_variant,
             'content' => $_content,
             'divider' => $_divider,
-            'view_namespace' => 'edrisa-onchange-field-options::fields'
+            'view_namespace' => 'edrisa-onchange-field-options::fields',
+            'wrapper_class' => $_wrapper_class
         ]);
     }
 
@@ -547,6 +549,7 @@ trait ReoccuringFieldsTrait
         $_tab,
         $_variant = 'info',
         $_divider = true,
+        array | null $_wrapper_class = null
     ){
         $this->crud->addField([
             'name' => $_name,
@@ -556,7 +559,8 @@ trait ReoccuringFieldsTrait
             'content' => $_content,
             'divider' => $_divider,
             'view_namespace' => 'edrisa-onchange-field-options::fields',
-            'tab' => $_tab
+            'tab' => $_tab,
+            'wrapper_class' => $_wrapper_class
         ]);
     }
 
