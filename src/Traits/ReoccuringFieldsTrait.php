@@ -528,7 +528,7 @@ trait ReoccuringFieldsTrait
         $_content,
         $_variant = 'info',
         $_divider = true,
-        array | null $_wrapper_class = null
+        $_wrapper_class = null
     ){
         $this->crud->addField([
             'name' => $_name,
@@ -549,7 +549,7 @@ trait ReoccuringFieldsTrait
         $_tab,
         $_variant = 'info',
         $_divider = true,
-        array | null $_wrapper_class = null
+        $_wrapper_class = null
     ){
         $this->crud->addField([
             'name' => $_name,
