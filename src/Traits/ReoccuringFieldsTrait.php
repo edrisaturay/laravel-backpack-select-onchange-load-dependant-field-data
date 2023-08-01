@@ -406,6 +406,7 @@ trait ReoccuringFieldsTrait
         $_name,
         $_wrapperClass = 'col-12',
         $_hint = null,
+        $_tab = null,
     ){
         return $this->crud->addField([
             'name' => $_name,
@@ -415,9 +416,11 @@ trait ReoccuringFieldsTrait
             'wrapper' => [
                 'class' => 'form-group '.$_wrapperClass,
             ],
+            'tab' => ($_tab)? $_tab : null,
         ]);
 
     }
+
 
     protected function date_time_field(
         $_name,

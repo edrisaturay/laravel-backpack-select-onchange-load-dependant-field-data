@@ -50,6 +50,16 @@ trait ReoccuringColumnsTrait
             'limit' => ($_limit) ? 100 : 100000,
         ]);
     }
+
+    protected function click_to_copy_column(
+        $_name,
+        $_label,
+        $_encrypted = false,
+        $_tab = null,
+
+    ){
+
+    }
     protected  function main_view_link_column($_name = 'name'): void
     {
         $this->crud->addColumn([
