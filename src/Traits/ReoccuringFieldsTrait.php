@@ -405,12 +405,13 @@ trait ReoccuringFieldsTrait
     protected function date_field(
         $_name,
         $_wrapperClass = 'col-12',
+        $_label = null,
         $_hint = null,
         $_tab = null,
     ){
         return $this->crud->addField([
             'name' => $_name,
-            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'label' =>  ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
             'type' => 'date',
             'hint' => $_hint,
             'wrapper' => [
