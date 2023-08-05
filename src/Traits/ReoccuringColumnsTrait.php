@@ -122,12 +122,13 @@ trait ReoccuringColumnsTrait
 
     protected function boolean_column(
         $_name = 'status',
+        $_label = null,
         $_onLabel = '✓',
         $_offLabel = '✕'): void
     {
         $this->crud->addColumn([
             'name' => $_name,
-            'label' => ucwords(Str::replace('_', ' ', $_name)),
+            'label' => ($_label) ? $_label : ucwords(Str::replace('_', ' ', $_name)),
             'type' => 'boolean',
 
             // optional
