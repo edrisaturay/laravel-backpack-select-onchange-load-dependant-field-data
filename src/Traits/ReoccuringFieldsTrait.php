@@ -96,7 +96,8 @@ trait ReoccuringFieldsTrait
         $_label,
         $_options,
         $_tab,
-        $_allowsNull = false
+        $_allowsNull = false,
+        $_default = null
     ){
         return $this->crud->addField([
             // Select
@@ -106,6 +107,7 @@ trait ReoccuringFieldsTrait
             'options'     => $_options,
             'allows_null' => $_allowsNull,
             'tab'     => $_tab,
+            'default' => $_default
         ]);
     }
 
