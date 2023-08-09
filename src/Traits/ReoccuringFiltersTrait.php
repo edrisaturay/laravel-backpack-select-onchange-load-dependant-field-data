@@ -17,7 +17,6 @@ trait ReoccuringFiltersTrait
         ],
         $_options,
         function($value) use($name) {
-            debug($value, $name);
              $this->crud->addClause('where', $name, $value);
         });
     }
