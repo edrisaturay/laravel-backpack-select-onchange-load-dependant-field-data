@@ -392,4 +392,28 @@ trait ReoccuringColumnsTrait
         ]);
     }
 
+    protected function timestamp_column( $_inPath = false): void
+    {
+
+        if ($_inPath) {
+            $this->crud->addColumn([
+                'name' => 'created_on',
+                'label' => __('MS Created Date'),
+                'type' => 'text',
+            ]);
+        }
+
+        $this->crud->addColumn([
+            'name' => 'created_at',
+            'label' => $_inPath ? __('Date Imported') : ('Date Created'),
+            'type' => 'date',
+        ]);
+
+        $this->crud->addColumn([
+            'name' => 'updated_at',
+            'label' => __('Modified on'),
+            'type' => 'datetime',
+        ]);
+
+    }
 }
