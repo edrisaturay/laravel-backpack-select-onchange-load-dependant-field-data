@@ -146,6 +146,7 @@ trait ReoccuringColumnsTrait
         $_name,
         $_attribute = '',
         $_label = null,
+        $_key = null,
     ){
         $this->crud->addColumn([
             'name' => $_name,
@@ -153,6 +154,7 @@ trait ReoccuringColumnsTrait
             'type' => 'relationship',
             'attribute' => $_attribute,
             'entity' => $_name,
+            'key' => $_key,
         ]);
     }
 
@@ -291,7 +293,7 @@ trait ReoccuringColumnsTrait
         ]);
     }
 
-    protected function relationship_list_column($_name, $_attribute, $_label = null){
+    protected function relationship_list_column($_name, $_attribute, $_label = null, $_key = null){
         $this->crud->addColumn([
             'name' => $_name,
             'label' => ($_label == null)? ucwords(Str::replace('_', ' ', $_name)) : $_label,
@@ -307,6 +309,7 @@ trait ReoccuringColumnsTrait
                     $q->where($_attribute, 'LIKE', '%' . $searchTerm . '%');
                 });
             },
+            'key' => $_key,
         ]);
     }
     protected function redirect_filter_column(
