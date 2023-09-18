@@ -273,7 +273,7 @@ trait ReoccuringColumnsTrait
             'wrapper' => [
                 'element' => 'a',
                 'href' => function ($crud, $column, $entry, $related_key) {
-                    return backpack_url($column['entity'] . '/' . $related_key . '/show');
+                    return backpack_url(str_replace('_', '-', $column['entity']) . '/' . $related_key . '/show');
                 },
             ],
             'searchLogic' => function ($query, $column, $searchTerm) use($_attribute) {
