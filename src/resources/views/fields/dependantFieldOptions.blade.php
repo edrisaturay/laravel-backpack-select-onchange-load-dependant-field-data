@@ -5,7 +5,7 @@
     $field['hint'] = $field['hint'] ?? '' ;
     $field['placeholder'] = $field['placeholder'] ?? '-' ;
     $field['method'] = $field['source_method'] ?? 'post' ;
-    $field['default'] = $field['default'] ?? null;
+    $field['default'] = $field['default'] ?? 0;
 
 @endphp
 
