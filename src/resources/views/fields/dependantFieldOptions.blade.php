@@ -5,7 +5,7 @@
     $field['hint'] = $field['hint'] ?? '' ;
     $field['placeholder'] = $field['placeholder'] ?? '-' ;
     $field['method'] = $field['source_method'] ?? 'post' ;
-    
+    $field['default'] = $field['default'] ?? null;
 
 @endphp
 
@@ -61,7 +61,13 @@
                 let options = ' <option value=""> ' + placeholder + '</option>';
 
                  data.forEach(item => {
-                    options += '<option value="' + item.id + '">' + item.{{$field['attribute']}} + ' </option>'
+                     let selected = '';
+                     let default = {{ $field['default'] }};
+                     if(item.id == default) {
+                        selected = 'selected="selected"';
+                     }
+
+                    options += '<option ' + selected + ' value="' + item.id + '">' + item.{{$field['attribute']}} + ' </option>'
                 });
 
                 resetOptions(options);
